@@ -387,7 +387,7 @@ export default function GalleryPage() {
         subtitle="Explore our collection of breathtaking moments and unforgettable experiences"
         backgroundImage="/cape-town-robben-island-table-mountain-aerial-view.jpg"
       />
-      <div className="py-16 md:py-24">
+      <div className="py-8 sm:py-12 md:py-16 lg:py-24">
         <InteractiveBentoGallery
           mediaItems={mediaItems}
           title=""

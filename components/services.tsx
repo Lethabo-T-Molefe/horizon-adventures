@@ -50,30 +50,30 @@ const services = [
 
 export function Services() {
   return (
-    <section id="experiences" className="py-20 md:py-32 bg-white">
-      <div className="container mx-auto px-6 lg:px-12">
-        <div className="mb-16 text-center">
-          <p className="text-sm tracking-widest uppercase text-accent font-bold mb-4">What We Offer</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-primary tracking-tight text-balance max-w-3xl mx-auto">
+    <section id="experiences" className="py-12 sm:py-16 md:py-20 lg:py-32 bg-white">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="mb-8 sm:mb-12 md:mb-16 text-center">
+          <p className="text-xs sm:text-sm tracking-widest uppercase text-accent font-bold mb-3 sm:mb-4">What We Offer</p>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary tracking-tight text-balance max-w-3xl mx-auto px-4">
             Experiences That Transform
           </h2>
-          <p className="text-lg text-muted-foreground mt-6 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground mt-4 sm:mt-6 max-w-2xl mx-auto px-4">
             Empowering growth through adventure! From strategic planning sessions to adventure camps, we co-create 
             meaningful connections through nature. Join us for unforgettable experiences!
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {services.map((service, index) => (
             <div
               key={index}
-              className="group p-8 bg-muted hover:bg-primary hover:text-white transition-all duration-300 border-2 border-transparent hover:border-accent hover:shadow-xl cursor-pointer"
+              className="group p-4 sm:p-6 md:p-8 bg-muted hover:bg-primary hover:text-white transition-all duration-300 border-2 border-transparent hover:border-accent hover:shadow-xl cursor-pointer"
             >
-              <p className="text-5xl font-bold text-accent group-hover:text-accent mb-6">{service.number}</p>
-              <h3 className="text-2xl font-bold mb-4 tracking-tight group-hover:text-white">{service.title}</h3>
-              <p className="text-muted-foreground group-hover:text-white/90 leading-relaxed mb-4">{service.description}</p>
+              <p className="text-4xl sm:text-5xl font-bold text-accent group-hover:text-accent mb-4 sm:mb-6">{service.number}</p>
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 tracking-tight group-hover:text-white">{service.title}</h3>
+              <p className="text-sm sm:text-base text-muted-foreground group-hover:text-white/90 leading-relaxed mb-3 sm:mb-4">{service.description}</p>
               {service.details && (
-                <p className="text-sm text-muted-foreground/80 group-hover:text-white/80 italic leading-relaxed">{service.details}</p>
+                <p className="text-xs sm:text-sm text-muted-foreground/80 group-hover:text-white/80 italic leading-relaxed">{service.details}</p>
               )}
             </div>
           ))}

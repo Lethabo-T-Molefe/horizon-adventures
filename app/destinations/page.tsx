@@ -55,7 +55,7 @@ export default function DestinationsPage() {
         subtitle="Discover the breathtaking destinations we visit on our unforgettable tours across South Africa"
         backgroundImage="/blyde-river-canyon-panorama-route-dramatic-landsca.jpg"
       />
-      <div className="h-[calc(100vh-50vh)] min-h-[500px]">
+      <div className="h-[calc(100vh-40vh)] sm:h-[calc(100vh-50vh)] min-h-[400px] sm:min-h-[500px]">
         <FlowingMenu
           items={destinations}
           speed={20}

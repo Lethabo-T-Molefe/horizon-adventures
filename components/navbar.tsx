@@ -38,8 +38,8 @@ const Navbar = () => {
           : "bg-transparent"
       }`}
     >
-      <nav className="container mx-auto px-6 md:px-8">
-        <div className="flex items-center justify-between h-20">
+      <nav className="container mx-auto px-4 sm:px-6 md:px-8">
+        <div className="flex items-center justify-between h-20 gap-2 sm:gap-4">
           {/* Logo */}
           <Link 
             href="/" 
@@ -60,7 +60,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Nav - Minimal, calm */}
-          <div className="hidden lg:flex items-center gap-12">
+          <div className="hidden lg:flex items-center gap-6 xl:gap-8 2xl:gap-12">
             {navLinks.map((link) => (
               <Link
                 key={link.label}
@@ -80,13 +80,14 @@ const Navbar = () => {
           <div className="hidden lg:block">
             <Link
               href="/contact"
-              className={`text-caption font-medium uppercase tracking-[0.1em] px-6 py-3 rounded-md transition-all duration-300 ${
+              className={`text-caption font-medium uppercase tracking-[0.1em] px-4 xl:px-6 py-2.5 xl:py-3 rounded-md transition-all duration-300 whitespace-nowrap ${
                 isScrolled
                   ? "bg-primary text-primary-foreground hover:bg-primary/90"
                   : "bg-white/10 backdrop-blur-sm text-white border border-white/30 hover:bg-white hover:text-foreground"
               }`}
             >
-              Plan Your Journey
+              <span className="hidden xl:inline">Plan Your Journey</span>
+              <span className="xl:hidden">Plan Journey</span>
             </Link>
           </div>
 
@@ -159,7 +160,7 @@ const Navbar = () => {
                 <Link
                   href="/contact"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="inline-block text-caption font-medium uppercase tracking-[0.1em] px-8 py-4 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
+                  className="inline-block w-full sm:w-auto text-center text-caption font-medium uppercase tracking-[0.1em] px-6 sm:px-8 py-3 sm:py-4 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
                 >
                   Plan Your Journey
                 </Link>

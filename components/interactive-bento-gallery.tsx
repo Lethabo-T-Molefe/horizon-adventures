@@ -288,8 +288,8 @@ const GalleryModal = ({ selectedItem, isOpen, onClose, setSelectedItem, mediaIte
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={selectedItem.id}
-                                className="relative w-full aspect-[16/9] max-w-[95%] sm:max-w-[85%] md:max-w-3xl 
-                                         h-auto max-h-[70vh] rounded-lg overflow-hidden shadow-md group"
+                                className="relative w-full aspect-[16/9] max-w-[98%] sm:max-w-[95%] md:max-w-[85%] lg:max-w-3xl 
+                                         h-auto max-h-[60vh] sm:max-h-[65vh] md:max-h-[70vh] rounded-lg overflow-hidden shadow-md group"
                                 initial={{ y: 20, scale: 0.97 }}
                                 animate={{
                                     y: 0,
@@ -368,11 +368,11 @@ const GalleryModal = ({ selectedItem, isOpen, onClose, setSelectedItem, mediaIte
 
                     {/* Close Button - Top Right */}
                     <motion.button
-                        className="absolute top-20 sm:top-4 md:top-5 right-3 sm:right-4 md:right-5 
-                                  p-2.5 sm:p-3 rounded-full bg-white/90 hover:bg-white text-gray-800 
+                        className="absolute top-16 sm:top-4 md:top-5 right-2 sm:right-3 md:right-4 lg:right-5 
+                                  p-2 sm:p-2.5 md:p-3 rounded-full bg-white/90 hover:bg-white text-gray-800 
                                   hover:text-gray-900 backdrop-blur-sm shadow-lg z-[70]
                                   transition-all duration-200 touch-manipulation
-                                  active:scale-95 pointer-events-auto"
+                                  active:scale-95 pointer-events-auto min-w-[44px] min-h-[44px] flex items-center justify-center"
                         onClick={(e) => {
                             e.stopPropagation();
                             onClose();

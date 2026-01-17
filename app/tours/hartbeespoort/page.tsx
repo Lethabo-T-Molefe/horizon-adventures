@@ -27,29 +27,29 @@ export default function HartbeespoortTourPage() {
       />
       
       {/* Tour Overview */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6 lg:px-12">
+      <section className="py-12 sm:py-16 md:py-20 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-12">
           <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <div className="text-center p-6 bg-muted rounded-lg">
-                <p className="text-sm text-muted-foreground uppercase tracking-wide mb-2">Duration</p>
-                <p className="text-2xl font-bold text-primary">3 Days</p>
-                <p className="text-sm text-muted-foreground mt-1">2 nights / 3 days</p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-12">
+              <div className="text-center p-4 sm:p-6 bg-muted rounded-lg">
+                <p className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wide mb-2">Duration</p>
+                <p className="text-xl sm:text-2xl font-bold text-primary">3 Days</p>
+                <p className="text-xs sm:text-sm text-muted-foreground mt-1">2 nights / 3 days</p>
               </div>
-              <div className="text-center p-6 bg-muted rounded-lg">
-                <p className="text-sm text-muted-foreground uppercase tracking-wide mb-2">Price</p>
-                <p className="text-2xl font-bold text-accent">R4,990</p>
-                <p className="text-sm text-muted-foreground mt-1">per person</p>
+              <div className="text-center p-4 sm:p-6 bg-muted rounded-lg">
+                <p className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wide mb-2">Price</p>
+                <p className="text-xl sm:text-2xl font-bold text-accent">R4,990</p>
+                <p className="text-xs sm:text-sm text-muted-foreground mt-1">per person</p>
               </div>
-              <div className="text-center p-6 bg-muted rounded-lg">
-                <p className="text-sm text-muted-foreground uppercase tracking-wide mb-2">Location</p>
-                <p className="text-2xl font-bold text-primary">Hartbeespoort</p>
-                <p className="text-sm text-muted-foreground mt-1">Dam Area</p>
+              <div className="text-center p-4 sm:p-6 bg-muted rounded-lg">
+                <p className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wide mb-2">Location</p>
+                <p className="text-xl sm:text-2xl font-bold text-primary">Hartbeespoort</p>
+                <p className="text-xs sm:text-sm text-muted-foreground mt-1">Dam Area</p>
               </div>
             </div>
 
-            <div className="prose prose-lg max-w-none mb-12">
-              <h2 className="text-3xl font-bold text-primary mb-6">Tour Overview</h2>
+            <div className="prose prose-lg max-w-none mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-4 sm:mb-6">Tour Overview</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Perfect for adventure lovers! This comprehensive tour includes accommodation, guided exploration, 
                 and a variety of dam-area activities. Experience the beauty of Hartbeespoort while enjoying 
@@ -64,8 +64,8 @@ export default function HartbeespoortTourPage() {
             </div>
 
             {/* Itinerary */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-primary mb-6">Detailed Itinerary</h2>
+            <div className="mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-4 sm:mb-6">Detailed Itinerary</h2>
               <div className="space-y-6">
                 <div className="border-l-4 border-accent pl-6">
                   <h3 className="text-xl font-bold text-primary mb-2">Day 1: Arrival & Welcome Activities</h3>
@@ -93,8 +93,8 @@ export default function HartbeespoortTourPage() {
             </div>
 
             {/* What's Included */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-primary mb-6">What's Included</h2>
+            <div className="mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-4 sm:mb-6">What's Included</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {[
                   "2 nights accommodation",
@@ -117,9 +117,9 @@ export default function HartbeespoortTourPage() {
             </div>
 
             {/* Activities Available */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-primary mb-6">Available Activities</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-4 sm:mb-6">Available Activities</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 {[
                   "Water activities on the dam",
                   "Quad biking adventures",
@@ -138,8 +138,8 @@ export default function HartbeespoortTourPage() {
             </div>
 
             {/* Highlights */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-primary mb-6">Tour Highlights</h2>
+            <div className="mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-4 sm:mb-6">Tour Highlights</h2>
               <div className="flex flex-wrap gap-3">
                 {["Dam Activities", "Accommodation", "Adventure Experiences", "Scenic Views", "Expert Guides", "Small Groups", "Perfect for Couples", "Group Friendly"].map((highlight, idx) => (
                   <span key={idx} className="px-4 py-2 bg-accent/10 text-primary rounded-full text-sm font-medium">
@@ -150,9 +150,9 @@ export default function HartbeespoortTourPage() {
             </div>
 
             {/* Image Gallery */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-primary mb-6">Tour Gallery</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-4 sm:mb-6">Tour Gallery</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
                 {[
                   { src: "/images/hartbeespoort-dam.webp", alt: "Hartbeespoort Dam" },
                   { src: "/images/hartbeespoort-hiking-activity.webp", alt: "Hiking Activity" },

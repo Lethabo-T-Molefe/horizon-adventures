@@ -85,20 +85,20 @@ const tours = [
 
 export function FeaturedTours() {
   return (
-    <section id="tours" className="py-20 md:py-32 bg-muted/30">
-      <div className="container mx-auto px-6 lg:px-12">
-        <div className="mb-16 text-center">
-          <p className="text-sm tracking-widest uppercase text-accent font-bold mb-4">Tour Collection</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-primary tracking-tight text-balance max-w-3xl mx-auto">
+    <section id="tours" className="py-12 sm:py-16 md:py-20 lg:py-32 bg-muted/30">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="mb-8 sm:mb-12 md:mb-16 text-center">
+          <p className="text-xs sm:text-sm tracking-widest uppercase text-accent font-bold mb-3 sm:mb-4">Tour Collection</p>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary tracking-tight text-balance max-w-3xl mx-auto px-4">
             Featured Adventures
           </h2>
-          <p className="text-lg text-muted-foreground mt-6 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground mt-4 sm:mt-6 max-w-2xl mx-auto px-4">
             Join us for unforgettable experiences! We're co-creating memorable adventures through South Africa's 
             most iconic destinations. Nothing short of spectacular!
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {tours.map((tour, index) => (
             <div
               key={index}
@@ -110,20 +110,20 @@ export function FeaturedTours() {
                   alt={tour.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute top-4 right-4 bg-secondary text-white px-4 py-2 font-bold text-sm">
+                <div className="absolute top-2 right-2 sm:top-4 sm:right-4 bg-secondary text-white px-2 py-1 sm:px-4 sm:py-2 font-bold text-xs sm:text-sm">
                   From {tour.price}
                 </div>
               </div>
 
-              <div className="p-6 space-y-4">
+              <div className="p-4 sm:p-6 space-y-3 sm:space-y-4">
                 <div>
                   <p className="text-xs uppercase tracking-wider text-accent font-bold mb-2">{tour.location}</p>
-                  <h3 className="text-2xl font-bold text-primary tracking-tight mb-2">{tour.title}</h3>
-                  <p className="text-sm text-muted-foreground font-medium mb-1">{tour.nights || tour.duration}</p>
-                  <p className="text-lg font-bold text-accent">{tour.price} {tour.pricePerPerson ? "per person" : ""}</p>
+                  <h3 className="text-xl sm:text-2xl font-bold text-primary tracking-tight mb-2">{tour.title}</h3>
+                  <p className="text-xs sm:text-sm text-muted-foreground font-medium mb-1">{tour.nights || tour.duration}</p>
+                  <p className="text-base sm:text-lg font-bold text-accent">{tour.price} {tour.pricePerPerson ? "per person" : ""}</p>
                 </div>
 
-                <p className="text-muted-foreground leading-relaxed text-sm mb-3">{tour.description || tour.highlights}</p>
+                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-3 line-clamp-3">{tour.description || tour.highlights}</p>
 
                 <div className="space-y-2 mb-4">
                   <p className="text-xs font-semibold text-primary uppercase tracking-wide">Includes:</p>

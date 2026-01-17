@@ -27,29 +27,29 @@ export default function CapeTownTourPage() {
       />
       
       {/* Tour Overview */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6 lg:px-12">
+      <section className="py-12 sm:py-16 md:py-20 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-12">
           <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <div className="text-center p-6 bg-muted rounded-lg">
-                <p className="text-sm text-muted-foreground uppercase tracking-wide mb-2">Duration</p>
-                <p className="text-2xl font-bold text-primary">3+ Days</p>
-                <p className="text-sm text-muted-foreground mt-1">3 nights / 4 days</p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-12">
+              <div className="text-center p-4 sm:p-6 bg-muted rounded-lg">
+                <p className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wide mb-2">Duration</p>
+                <p className="text-xl sm:text-2xl font-bold text-primary">3+ Days</p>
+                <p className="text-xs sm:text-sm text-muted-foreground mt-1">3 nights / 4 days</p>
               </div>
-              <div className="text-center p-6 bg-muted rounded-lg">
-                <p className="text-sm text-muted-foreground uppercase tracking-wide mb-2">Price</p>
-                <p className="text-2xl font-bold text-accent">R4,500</p>
-                <p className="text-sm text-muted-foreground mt-1">per person</p>
+              <div className="text-center p-4 sm:p-6 bg-muted rounded-lg">
+                <p className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wide mb-2">Price</p>
+                <p className="text-xl sm:text-2xl font-bold text-accent">R4,500</p>
+                <p className="text-xs sm:text-sm text-muted-foreground mt-1">per person</p>
               </div>
-              <div className="text-center p-6 bg-muted rounded-lg">
-                <p className="text-sm text-muted-foreground uppercase tracking-wide mb-2">Location</p>
-                <p className="text-2xl font-bold text-primary">Cape Town</p>
-                <p className="text-sm text-muted-foreground mt-1">Western Cape</p>
+              <div className="text-center p-4 sm:p-6 bg-muted rounded-lg">
+                <p className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wide mb-2">Location</p>
+                <p className="text-xl sm:text-2xl font-bold text-primary">Cape Town</p>
+                <p className="text-xs sm:text-sm text-muted-foreground mt-1">Western Cape</p>
               </div>
             </div>
 
-            <div className="prose prose-lg max-w-none mb-12">
-              <h2 className="text-3xl font-bold text-primary mb-6">Tour Overview</h2>
+            <div className="prose prose-lg max-w-none mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-4 sm:mb-6">Tour Overview</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Embark on a journey through South Africa's most historic city. This multi-day tour takes you to 
                 iconic landmarks including Robben Island—a place steeped in history and resilience. Explore Table 
@@ -62,8 +62,8 @@ export default function CapeTownTourPage() {
             </div>
 
             {/* Itinerary */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-primary mb-6">Detailed Itinerary</h2>
+            <div className="mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-4 sm:mb-6">Detailed Itinerary</h2>
               <div className="space-y-6">
                 <div className="border-l-4 border-accent pl-6">
                   <h3 className="text-xl font-bold text-primary mb-2">Day 1: Arrival & Cape Town Magic</h3>
@@ -106,9 +106,9 @@ export default function CapeTownTourPage() {
             </div>
 
             {/* What's Included */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-primary mb-6">What's Included</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-4 sm:mb-6">What's Included</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 {[
                   "Transportation from Pretoria",
                   "Accommodation (3 nights)",
@@ -130,11 +130,11 @@ export default function CapeTownTourPage() {
             </div>
 
             {/* Highlights */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-primary mb-6">Tour Highlights</h2>
-              <div className="flex flex-wrap gap-3">
+            <div className="mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-4 sm:mb-6">Tour Highlights</h2>
+              <div className="flex flex-wrap gap-2 sm:gap-3">
                 {["Robben Island", "Table Mountain", "City Exploration", "Historical Sites", "Cultural Heritage", "Scenic Views", "Expert Guides", "Small Groups"].map((highlight, idx) => (
-                  <span key={idx} className="px-4 py-2 bg-accent/10 text-primary rounded-full text-sm font-medium">
+                  <span key={idx} className="px-3 sm:px-4 py-1.5 sm:py-2 bg-accent/10 text-primary rounded-full text-xs sm:text-sm font-medium">
                     {highlight}
                   </span>
                 ))}
@@ -142,9 +142,9 @@ export default function CapeTownTourPage() {
             </div>
 
             {/* Image Gallery */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-primary mb-6">Tour Gallery</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-4 sm:mb-6">Tour Gallery</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
                 {[
                   { src: "/images/cape-town-table-mountain.webp", alt: "Table Mountain" },
                   { src: "/images/cape-town-robben-island.webp", alt: "Robben Island" },
@@ -165,19 +165,19 @@ export default function CapeTownTourPage() {
             </div>
 
             {/* CTA */}
-            <div className="text-center p-8 bg-muted rounded-lg">
-              <h3 className="text-2xl font-bold text-primary mb-4">Ready for Your Cape Town Adventure?</h3>
-              <p className="text-muted-foreground mb-6">
+            <div className="text-center p-4 sm:p-6 md:p-8 bg-muted rounded-lg">
+              <h3 className="text-xl sm:text-2xl font-bold text-primary mb-3 sm:mb-4">Ready for Your Cape Town Adventure?</h3>
+              <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6">
                 Book now or contact us for custom group packages and special pricing.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
                 <Link href="/contact">
-                  <Button className="px-8 py-6 bg-primary hover:bg-primary/90 text-white font-bold uppercase text-sm tracking-wider">
+                  <Button className="w-full sm:w-auto px-6 sm:px-8 py-4 sm:py-6 bg-primary hover:bg-primary/90 text-white font-bold uppercase text-xs sm:text-sm tracking-wider">
                     Book This Tour
                   </Button>
                 </Link>
                 <Link href="/contact">
-                  <Button variant="outline" className="px-8 py-6 border-2 border-primary text-primary font-bold uppercase text-sm tracking-wider hover:bg-primary hover:text-white">
+                  <Button variant="outline" className="w-full sm:w-auto px-6 sm:px-8 py-4 sm:py-6 border-2 border-primary text-primary font-bold uppercase text-xs sm:text-sm tracking-wider hover:bg-primary hover:text-white">
                     Request Custom Package
                   </Button>
                 </Link>

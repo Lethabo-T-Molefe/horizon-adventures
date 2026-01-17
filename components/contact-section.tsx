@@ -9,22 +9,22 @@ import { FaFacebook, FaInstagram, FaTiktok, FaLinkedin } from "react-icons/fa"
 
 export function ContactSection() {
   return (
-    <section id="contact" className="py-20 md:py-32 bg-muted/30">
-      <div className="container mx-auto px-6 lg:px-12">
-        <div className="mb-16 text-center">
-          <p className="text-sm tracking-widest uppercase text-accent font-bold mb-4">Get in Touch</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-primary tracking-tight text-balance max-w-3xl mx-auto">
+    <section id="contact" className="py-12 sm:py-16 md:py-20 lg:py-32 bg-muted/30">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="mb-8 sm:mb-12 md:mb-16 text-center">
+          <p className="text-xs sm:text-sm tracking-widest uppercase text-accent font-bold mb-3 sm:mb-4">Get in Touch</p>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary tracking-tight text-balance max-w-3xl mx-auto px-4">
             Start Your Adventure Today
           </h2>
-          <p className="text-lg text-muted-foreground mt-6 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground mt-4 sm:mt-6 max-w-2xl mx-auto px-4">
             Ready to explore? We're thrilled to help you plan your perfect South African adventure. 
             Get in touch with us today to start co-creating unforgettable experiences!
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
-          <div className="space-y-6">
-            <div className="p-8 bg-white border-l-4 border-accent shadow-sm hover:shadow-md transition-shadow">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12 max-w-7xl mx-auto">
+          <div className="space-y-4 sm:space-y-6">
+            <div className="p-4 sm:p-6 md:p-8 bg-white border-l-4 border-accent shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-start gap-4">
                 <MapPin className="w-6 h-6 text-accent mt-1 flex-shrink-0" />
                 <div>
@@ -130,9 +130,9 @@ export function ContactSection() {
             </div>
           </div>
 
-          <div className="bg-white p-8 shadow-lg">
-            <form className="space-y-6">
-              <div className="grid grid-cols-2 gap-4">
+          <div className="bg-white p-4 sm:p-6 md:p-8 shadow-lg">
+            <form className="space-y-4 sm:space-y-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label
                     htmlFor="firstName"

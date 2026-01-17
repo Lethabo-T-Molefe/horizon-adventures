@@ -3,11 +3,11 @@ import { FaFacebook, FaInstagram, FaTiktok, FaLinkedin } from "react-icons/fa"
 
 export function Footer() {
   return (
-    <footer className="bg-primary text-primary-foreground py-16">
-      <div className="container mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+    <footer className="bg-primary text-primary-foreground py-8 sm:py-12 md:py-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 md:gap-12 mb-8 sm:mb-12 md:mb-16">
           {/* Brand */}
-          <div className="md:col-span-2">
+          <div className="sm:col-span-2 lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
               <Image src="/images/image.png" alt="Horizon Adventures" width={50} height={50} className="w-12 h-12" />
               <h3 className="text-xl tracking-tight font-semibold">Horizon Adventures</h3>
@@ -104,9 +104,9 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-primary-foreground/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-primary-foreground/70">
+        <div className="border-t border-primary-foreground/20 pt-6 sm:pt-8 flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4 text-xs text-primary-foreground/70 text-center sm:text-left">
           <p>© 2026 Horizon Adventures. All rights reserved.</p>
-          <div className="flex gap-8">
+          <div className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-6 md:gap-8">
             <a href="#" className="hover:text-accent transition-colors">
               Privacy Policy
             </a>

@@ -1,12 +1,22 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+import { Bebas_Neue, Montserrat } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import Script from "next/script"
 import "./globals.css"
 
-const _geist = Geist({ subsets: ["latin"] })
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
+const primaryFont = Bebas_Neue({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-primary",
+  display: "swap",
+})
+
+const secondaryFont = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-secondary",
+  display: "swap",
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.horizonadv.co.za"),
@@ -158,8 +168,8 @@ export default function RootLayout({
   }
 
   return (
-    <html lang="en-ZA" suppressHydrationWarning>
-      <body className={`font-sans antialiased`} suppressHydrationWarning>
+    <html lang="en-ZA" suppressHydrationWarning className={`${primaryFont.variable} ${secondaryFont.variable}`}>
+      <body className={`${secondaryFont.className} antialiased overflow-x-hidden`} suppressHydrationWarning>
         <Script
           id="structured-data"
           type="application/ld+json"
