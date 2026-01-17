@@ -23,7 +23,7 @@ export default function CapeTownTourPage() {
       <PageHero 
         title="Cape Town Heritage Tour"
         subtitle="Embark on a journey through South Africa's most historic city"
-        backgroundImage="/images/cape-town-tour-page.webp"
+        backgroundImage="/cape-town-robben-island-table-mountain-aerial-view.jpg"
       />
       
       {/* Tour Overview */}

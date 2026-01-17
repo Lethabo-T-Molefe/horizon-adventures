@@ -23,7 +23,7 @@ export default function HartbeespoortTourPage() {
       <PageHero 
         title="Hartbeespoort Adventure Tour"
         subtitle="Perfect for adventure lovers! Experience dam activities and thrilling adventures"
-        backgroundImage="/images/hartbeespoort-dam.webp"
+        backgroundImage="/hartbeespoort-dam-adventure-activities-sunset.jpg"
       />
       
       {/* Tour Overview */}

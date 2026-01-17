@@ -10,7 +10,7 @@ export default function TestimonialsPage() {
       <PageHero 
         title="Testimonials"
         subtitle="Hear from our guests about their unforgettable adventures with us"
-        backgroundImage="/images/hartbeespoort-dam.webp"
+        backgroundImage="/hartbeespoort-dam-sunset-serene-water-landscape.jpg"
       />
       <Testimonials />
       <Footer />

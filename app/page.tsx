@@ -2,6 +2,7 @@ import Navbar from "@/components/navbar"
 import { Hero } from "@/components/hero"
 import { Services } from "@/components/services"
 import { TripTypesShowcase } from "@/components/trip-types-showcase"
+import { Testimonials } from "@/components/testimonials"
 import { Footer } from "@/components/footer"
 import Link from "next/link"
 
@@ -65,6 +66,9 @@ export default function Home() {
 
       {/* Trip Types Section */}
       <TripTypesShowcase />
+
+      {/* Testimonials Section */}
+      <Testimonials />
 
       <Footer />
     </main>

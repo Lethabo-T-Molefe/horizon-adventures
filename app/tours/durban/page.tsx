@@ -23,7 +23,7 @@ export default function DurbanTourPage() {
       <PageHero 
         title="Durban Coastal Adventure"
         subtitle="Experience the warmth of the Indian Ocean and vibrant coastal culture"
-        backgroundImage="/images/durban-ushaka-marine-world.webp"
+        backgroundImage="/river-rafting-south-africa-adventure-action.jpg"
       />
       
       {/* Tour Overview */}

@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X } from 'lucide-react';
 
@@ -142,33 +142,154 @@ interface GalleryModalProps {
 }
 const GalleryModal = ({ selectedItem, isOpen, onClose, setSelectedItem, mediaItems }: GalleryModalProps) => {
     const [dockPosition, setDockPosition] = useState({ x: 0, y: 0 });  // Track the position of the dockable panel
+    const [touchStart, setTouchStart] = useState<number | null>(null);
+    const [touchEnd, setTouchEnd] = useState<number | null>(null);
+    const [isSwiping, setIsSwiping] = useState(false);
+
+    // Minimum swipe distance (in pixels)
+    const minSwipeDistance = 50;
+
+    // Get current item index
+    const currentIndex = mediaItems.findIndex(item => item.id === selectedItem.id);
+
+    // Navigate to next item
+    const goToNext = useCallback(() => {
+        const index = mediaItems.findIndex(item => item.id === selectedItem.id);
+        if (index < mediaItems.length - 1) {
+            setSelectedItem(mediaItems[index + 1]);
+        } else {
+            setSelectedItem(mediaItems[0]); // Loop to first
+        }
+    }, [mediaItems, selectedItem.id, setSelectedItem]);
+
+    // Navigate to previous item
+    const goToPrevious = useCallback(() => {
+        const index = mediaItems.findIndex(item => item.id === selectedItem.id);
+        if (index > 0) {
+            setSelectedItem(mediaItems[index - 1]);
+        } else {
+            setSelectedItem(mediaItems[mediaItems.length - 1]); // Loop to last
+        }
+    }, [mediaItems, selectedItem.id, setSelectedItem]);
+
+    // Keyboard navigation
+    useEffect(() => {
+        if (!isOpen) return;
+
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                goToNext();
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                goToPrevious();
+            } else if (e.key === 'Escape') {
+                e.preventDefault();
+                onClose();
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [isOpen, goToNext, goToPrevious, onClose]);
+
+    // Touch handlers for swipe gestures
+    const onTouchStart = (e: React.TouchEvent) => {
+        setTouchEnd(null);
+        setTouchStart(e.targetTouches[0].clientX);
+        setIsSwiping(false);
+    };
+
+    const onTouchMove = (e: React.TouchEvent) => {
+        setTouchEnd(e.targetTouches[0].clientX);
+        setIsSwiping(true);
+    };
+
+    const onTouchEnd = () => {
+        if (!touchStart || !touchEnd) return;
+        
+        const distance = touchStart - touchEnd;
+        const isLeftSwipe = distance > minSwipeDistance;
+        const isRightSwipe = distance < -minSwipeDistance;
+
+        if (isLeftSwipe) {
+            goToNext();
+        } else if (isRightSwipe) {
+            goToPrevious();
+        }
+
+        setTouchStart(null);
+        setTouchEnd(null);
+        setIsSwiping(false);
+    };
+
+    // Mouse drag handlers for desktop swipe
+    const [mouseStart, setMouseStart] = useState<number | null>(null);
+    const [mouseEnd, setMouseEnd] = useState<number | null>(null);
+
+    const onMouseDown = (e: React.MouseEvent) => {
+        setMouseEnd(null);
+        setMouseStart(e.clientX);
+        setIsSwiping(false);
+    };
+
+    const onMouseMove = (e: React.MouseEvent) => {
+        if (mouseStart !== null) {
+            setMouseEnd(e.clientX);
+            setIsSwiping(true);
+        }
+    };
+
+    const onMouseUp = () => {
+        if (mouseStart !== null && mouseEnd !== null) {
+            const distance = mouseStart - mouseEnd;
+            const isLeftSwipe = distance > minSwipeDistance;
+            const isRightSwipe = distance < -minSwipeDistance;
+
+            if (isLeftSwipe) {
+                goToNext();
+            } else if (isRightSwipe) {
+                goToPrevious();
+            }
+        }
+
+        setMouseStart(null);
+        setMouseEnd(null);
+        setIsSwiping(false);
+    };
 
     if (!isOpen) return null; // Return null if the modal is not open
 
     return (
         <>
-            {/* Main Modal */}
+            {/* Main Modal - Backdrop (clickable to close) */}
             <motion.div
-                initial={{ scale: 0.98 }}
-                animate={{ scale: 1 }}
-                exit={{ scale: 0.98 }}
-                transition={{
-                    type: "spring",
-                    stiffness: 400,
-                    damping: 30
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                onClick={(e) => {
+                    // Close when clicking on backdrop (not on the image container)
+                    if (e.target === e.currentTarget && !isSwiping) {
+                        onClose();
+                    }
                 }}
-                className="fixed inset-0 w-full min-h-screen sm:h-[90vh] md:h-[600px] backdrop-blur-lg 
-                          rounded-none sm:rounded-lg md:rounded-xl overflow-hidden z-10"
-
+                className="fixed inset-0 bg-black/60 backdrop-blur-md z-[60] cursor-pointer"
             >
-                {/* Main Content */}
-                <div className="h-full flex flex-col">
-                    <div className="flex-1 p-2 sm:p-3 md:p-4 flex items-center justify-center bg-gray-50/50">
+                {/* Main Content Container */}
+                <div 
+                    className="fixed inset-0 w-full min-h-screen sm:h-[90vh] md:h-[600px] 
+                              rounded-none sm:rounded-lg md:rounded-xl overflow-hidden z-[60]
+                              pointer-events-none"
+                    onClick={(e) => e.stopPropagation()}
+                >
+                    {/* Main Content */}
+                    <div className="h-full flex flex-col pointer-events-auto">
+                        <div className="flex-1 p-2 sm:p-3 md:p-4 flex items-center justify-center bg-transparent">
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={selectedItem.id}
                                 className="relative w-full aspect-[16/9] max-w-[95%] sm:max-w-[85%] md:max-w-3xl 
-                                         h-auto max-h-[70vh] rounded-lg overflow-hidden shadow-md"
+                                         h-auto max-h-[70vh] rounded-lg overflow-hidden shadow-md group"
                                 initial={{ y: 20, scale: 0.97 }}
                                 animate={{
                                     y: 0,
@@ -185,9 +306,53 @@ const GalleryModal = ({ selectedItem, isOpen, onClose, setSelectedItem, mediaIte
                                     scale: 0.97,
                                     transition: { duration: 0.15 }
                                 }}
-                                onClick={onClose}
+                                onTouchStart={onTouchStart}
+                                onTouchMove={onTouchMove}
+                                onTouchEnd={onTouchEnd}
+                                onMouseDown={onMouseDown}
+                                onMouseMove={onMouseMove}
+                                onMouseUp={onMouseUp}
+                                onMouseLeave={onMouseUp}
+                                onClick={(e) => e.stopPropagation()}
                             >
-                                <MediaItem item={selectedItem} className="w-full h-full object-contain bg-gray-900/20" onClick={onClose} />
+                                <MediaItem 
+                                    item={selectedItem} 
+                                    className="w-full h-full object-contain bg-gray-900/20" 
+                                    onClick={(e) => e.stopPropagation()}
+                                />
+                                {/* Navigation Arrows */}
+                                <button
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        goToPrevious();
+                                    }}
+                                    className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 
+                                               p-2 sm:p-3 rounded-full bg-black/50 hover:bg-black/70 
+                                               text-white backdrop-blur-sm transition-all z-10
+                                               opacity-70 hover:opacity-100 active:opacity-100
+                                               touch-manipulation"
+                                    aria-label="Previous image"
+                                >
+                                    <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                                    </svg>
+                                </button>
+                                <button
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        goToNext();
+                                    }}
+                                    className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 
+                                               p-2 sm:p-3 rounded-full bg-black/50 hover:bg-black/70 
+                                               text-white backdrop-blur-sm transition-all z-10
+                                               opacity-70 hover:opacity-100 active:opacity-100
+                                               touch-manipulation"
+                                    aria-label="Next image"
+                                >
+                                    <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </button>
                                 <div className="absolute bottom-0 left-0 right-0 p-2 sm:p-3 md:p-4 
                                               bg-gradient-to-t from-black/50 to-transparent">
                                     <h3 className="text-white text-base sm:text-lg md:text-xl font-semibold">
@@ -200,20 +365,38 @@ const GalleryModal = ({ selectedItem, isOpen, onClose, setSelectedItem, mediaIte
                             </motion.div>
                         </AnimatePresence>
                     </div>
+
+                    {/* Close Button - Top Right */}
+                    <motion.button
+                        className="absolute top-20 sm:top-4 md:top-5 right-3 sm:right-4 md:right-5 
+                                  p-2.5 sm:p-3 rounded-full bg-white/90 hover:bg-white text-gray-800 
+                                  hover:text-gray-900 backdrop-blur-sm shadow-lg z-[70]
+                                  transition-all duration-200 touch-manipulation
+                                  active:scale-95 pointer-events-auto"
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            onClose();
+                        }}
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        aria-label="Close gallery"
+                    >
+                        <X className='w-4 h-4 sm:w-5 sm:h-5' strokeWidth={2.5} />
+                    </motion.button>
+
+                    {/* Hint Text - Bottom Center (Desktop) */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.5 }}
+                        className="hidden md:block absolute bottom-6 left-1/2 -translate-x-1/2 
+                                   px-4 py-2 rounded-full bg-black/50 backdrop-blur-sm text-white 
+                                   text-xs z-[70] pointer-events-none"
+                    >
+                        Click outside or press <kbd className="px-1.5 py-0.5 bg-white/20 rounded text-xs">ESC</kbd> to close
+                    </motion.div>
+                    </div>
                 </div>
-
-                {/* Close Button */}
-                <motion.button
-                    className="absolute top-2 sm:top-2.5 md:top-3 right-2 sm:right-2.5 md:right-3 
-                              p-2 rounded-full bg-gray-200/80 text-gray-700 hover:bg-gray-300/80 
-                              text-xs sm:text-sm backdrop-blur-sm "
-                    onClick={onClose}
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                >
-                    <X className='w-3 h-3' />
-                </motion.button>
-
             </motion.div>
 
             {/* Draggable Dock */}
@@ -229,7 +412,7 @@ const GalleryModal = ({ selectedItem, isOpen, onClose, setSelectedItem, mediaIte
                         y: prev.y + info.offset.y
                     }));
                 }}
-                className="fixed z-50 left-1/2 bottom-4 -translate-x-1/2 touch-none"
+                className="fixed z-[70] left-1/2 bottom-4 -translate-x-1/2 touch-none"
             >
                 <motion.div
                     className="relative rounded-xl bg-sky-400/20 backdrop-blur-xl 
@@ -304,27 +487,33 @@ const InteractiveBentoGallery: React.FC<InteractiveBentoGalleryProps> = ({ media
     const [isDragging, setIsDragging] = useState(false);
 
     return (
-        <div className="container mx-auto px-6 md:px-8 lg:px-12 py-12 md:py-16 max-w-7xl">
-            <div className="mb-12 md:mb-16 text-center">
-                <motion.h1
-                    className="text-2xl sm:text-3xl md:text-4xl font-bold bg-clip-text text-transparent 
-                             bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900
-                             dark:from-white dark:via-gray-200 dark:to-white"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                >
-                    {title}
-                </motion.h1>
-                <motion.p
-                    className="mt-2 text-sm sm:text-base text-gray-600 dark:text-gray-400"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.1 }}
-                >
-                    {description}
-                </motion.p>
-            </div>
+        <div className="container mx-auto px-6 lg:px-12 py-8 max-w-[1920px]">
+            {(title || description) && (
+                <div className="mb-12 text-center">
+                    {title && (
+                        <motion.h1
+                            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent 
+                                     bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900
+                                     dark:from-white dark:via-gray-200 dark:to-white"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                        >
+                            {title}
+                        </motion.h1>
+                    )}
+                    {description && (
+                        <motion.p
+                            className="mt-4 text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.1 }}
+                        >
+                            {description}
+                        </motion.p>
+                    )}
+                </div>
+            )}
             <AnimatePresence mode="wait">
                 {selectedItem ? (
                     <GalleryModal
@@ -336,7 +525,7 @@ const InteractiveBentoGallery: React.FC<InteractiveBentoGalleryProps> = ({ media
                     />
                 ) : (
                     <motion.div
-                        className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6 auto-rows-[120px] md:auto-rows-[150px]"
+                        className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-5 md:gap-7 lg:gap-8 auto-rows-[150px] md:auto-rows-[200px] lg:auto-rows-[250px] xl:auto-rows-[280px]"
                         initial="hidden"
                         animate="visible"
                         exit="hidden"

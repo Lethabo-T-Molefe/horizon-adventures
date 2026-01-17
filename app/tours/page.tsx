@@ -24,7 +24,7 @@ export default function ToursPage() {
       <PageHero 
         title="Our Tours & Adventures"
         subtitle="Choose your adventure - from multi-day cultural tours to thrilling day activities"
-        backgroundImage="/images/panorama-route-scenic.webp"
+        backgroundImage="/river-rafting-south-africa-action-adventure-white-.jpg"
       />
       <FeaturedTours />
       <CouplesRetreat />

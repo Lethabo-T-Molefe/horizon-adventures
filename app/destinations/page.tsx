@@ -1,5 +1,6 @@
 import Navbar from "@/components/navbar"
 import { Footer } from "@/components/footer"
+import { PageHero } from "@/components/page-hero"
 import FlowingMenu from "@/components/flowing-menu"
 
 const destinations = [
@@ -49,7 +50,12 @@ export default function DestinationsPage() {
   return (
     <main className="min-h-screen">
       <Navbar />
-      <div className="h-[calc(100vh-5rem)] mt-20">
+      <PageHero 
+        title="Featured Destinations"
+        subtitle="Discover the breathtaking destinations we visit on our unforgettable tours across South Africa"
+        backgroundImage="/blyde-river-canyon-panorama-route-dramatic-landsca.jpg"
+      />
+      <div className="h-[calc(100vh-50vh)] min-h-[500px]">
         <FlowingMenu
           items={destinations}
           speed={20}

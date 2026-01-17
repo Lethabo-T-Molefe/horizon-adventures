@@ -23,7 +23,7 @@ export default function MpumalangaTourPage() {
       <PageHero 
         title="Mpumalanga Panorama Route Tour"
         subtitle="Nothing short of spectacular! Experience breathtaking landscapes and natural wonders"
-        backgroundImage="/images/panorama-route-scenic.webp"
+        backgroundImage="/blyde-river-canyon-panorama-route-viewpoint-waterf.jpg"
       />
       
       {/* Tour Overview */}

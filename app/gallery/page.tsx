@@ -1,9 +1,11 @@
 import Navbar from "@/components/navbar"
 import { Footer } from "@/components/footer"
+import { PageHero } from "@/components/page-hero"
 import InteractiveBentoGallery from "@/components/interactive-bento-gallery"
 
-// Gallery showcasing all our adventure experiences
+// Gallery showcasing all images and videos from the public folder
 const mediaItems = [
+  // Images from /images/ folder
   {
     id: 1,
     type: "image",
@@ -252,17 +254,144 @@ const mediaItems = [
     url: "/images/empty-bus.webp",
     span: "sm:col-span-2"
   },
+  {
+    id: 32,
+    type: "image",
+    title: "Horse Riding Experience",
+    desc: "Another beautiful horseback adventure",
+    url: "/images/horse-riding-1.webp",
+    span: "sm:col-span-1"
+  },
+  {
+    id: 33,
+    type: "image",
+    title: "Cape Town Tour",
+    desc: "Cape Town tour highlights",
+    url: "/images/cape-town-tour-page.webp",
+    span: "sm:col-span-2"
+  },
+  // Images from /public/ root folder
+  {
+    id: 34,
+    type: "image",
+    title: "Kloofing Canyon Jumping",
+    desc: "Adventure waterfall experience",
+    url: "/kloofing-canyon-jumping-south-africa-waterfall-cry.jpg",
+    span: "sm:col-span-2"
+  },
+  {
+    id: 35,
+    type: "image",
+    title: "River Rafting Action",
+    desc: "White water adventure in South Africa",
+    url: "/river-rafting-south-africa-action-adventure-white-.jpg",
+    span: "sm:col-span-2"
+  },
+  {
+    id: 36,
+    type: "image",
+    title: "Hartbeespoort Sunset",
+    desc: "Serene water landscape at sunset",
+    url: "/hartbeespoort-dam-sunset-serene-water-landscape.jpg",
+    span: "sm:col-span-2 sm:row-span-2"
+  },
+  {
+    id: 37,
+    type: "image",
+    title: "Blyde River Canyon",
+    desc: "Dramatic panorama route landscape",
+    url: "/blyde-river-canyon-panorama-route-dramatic-landsca.jpg",
+    span: "sm:col-span-2"
+  },
+  {
+    id: 38,
+    type: "image",
+    title: "Cape Town Aerial View",
+    desc: "Robben Island and Table Mountain from above",
+    url: "/cape-town-robben-island-table-mountain-aerial-view.jpg",
+    span: "sm:col-span-2 sm:row-span-2"
+  },
+  {
+    id: 39,
+    type: "image",
+    title: "Mountain Landscape Vista",
+    desc: "Dramatic South African mountain views",
+    url: "/dramatic-south-african-mountain-landscape-vista-pa.jpg",
+    span: "sm:col-span-2"
+  },
+  {
+    id: 40,
+    type: "image",
+    title: "Kloofing Adventure Waterfall",
+    desc: "Canyon jumping adventure",
+    url: "/kloofing-canyon-jumping-adventure-waterfall.jpg",
+    span: "sm:col-span-2"
+  },
+  {
+    id: 41,
+    type: "image",
+    title: "River Rafting Adventure",
+    desc: "Action-packed river rafting",
+    url: "/river-rafting-south-africa-adventure-action.jpg",
+    span: "sm:col-span-2"
+  },
+  {
+    id: 42,
+    type: "image",
+    title: "Hartbeespoort Adventure Activities",
+    desc: "Sunset adventure activities",
+    url: "/hartbeespoort-dam-adventure-activities-sunset.jpg",
+    span: "sm:col-span-2"
+  },
+  {
+    id: 43,
+    type: "image",
+    title: "Panorama Route Viewpoint",
+    desc: "Blyde River Canyon viewpoint and waterfall",
+    url: "/blyde-river-canyon-panorama-route-viewpoint-waterf.jpg",
+    span: "sm:col-span-2"
+  },
+  {
+    id: 44,
+    type: "image",
+    title: "Cape Town Scenic",
+    desc: "Robben Island and Table Mountain scenic view",
+    url: "/cape-town-robben-island-table-mountain-scenic.jpg",
+    span: "sm:col-span-2"
+  },
+  {
+    id: 45,
+    type: "image",
+    title: "Mountain Landscape Panorama",
+    desc: "Dramatic South African landscape panorama",
+    url: "/dramatic-south-african-mountain-landscape-panorama.jpg",
+    span: "sm:col-span-2"
+  },
+  // Video from /videos/ folder
+  {
+    id: 46,
+    type: "video",
+    title: "Adventure Tour Video",
+    desc: "Experience our amazing adventure tours",
+    url: "/videos/tour.mp4",
+    span: "sm:col-span-2 sm:row-span-2"
+  },
 ]
 
 export default function GalleryPage() {
   return (
     <main className="min-h-screen bg-background">
       <Navbar />
-      <div className="pt-24 pb-16 md:pt-28 md:pb-20">
+      <PageHero 
+        title="Adventure Gallery"
+        subtitle="Explore our collection of breathtaking moments and unforgettable experiences"
+        backgroundImage="/cape-town-robben-island-table-mountain-aerial-view.jpg"
+      />
+      <div className="py-16 md:py-24">
         <InteractiveBentoGallery
           mediaItems={mediaItems}
-          title="Adventure Gallery"
-          description="Explore our collection of breathtaking moments and unforgettable experiences"
+          title=""
+          description=""
         />
       </div>
       <Footer />

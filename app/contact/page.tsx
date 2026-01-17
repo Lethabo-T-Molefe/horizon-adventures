@@ -22,7 +22,7 @@ export default function ContactPage() {
       <PageHero 
         title="Contact Us"
         subtitle="Get in touch to start planning your unforgettable South African adventure"
-        backgroundImage="/images/panorama-route-scenic.webp"
+        backgroundImage="/dramatic-south-african-mountain-landscape-panorama.jpg"
       />
       <ContactSection />
       <Footer />

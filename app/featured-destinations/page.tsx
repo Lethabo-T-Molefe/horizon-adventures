@@ -21,7 +21,7 @@ export default function FeaturedDestinationsPage() {
       <PageHero 
         title="Featured Destinations"
         subtitle="Discover the breathtaking destinations we visit on our unforgettable tours"
-        backgroundImage="/images/cape-town-table-mountain.webp"
+        backgroundImage="/cape-town-robben-island-table-mountain-scenic.jpg"
       />
       <section className="py-20 md:py-32 bg-muted/30">
         <div className="container mx-auto px-6 lg:px-12">

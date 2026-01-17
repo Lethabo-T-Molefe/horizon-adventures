@@ -33,7 +33,7 @@ export default function AboutPage() {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 z-0">
           <img
-            src="/images/panorama-route-scenic.webp"
+            src="/kloofing-canyon-jumping-south-africa-waterfall-cry.jpg"
             alt="South African Landscape"
             className="w-full h-full object-cover"
           />
