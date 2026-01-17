@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { FaFacebook, FaInstagram, FaTiktok, FaLinkedin } from "react-icons/fa"
 
 export function Footer() {
   return (
@@ -50,17 +51,45 @@ export function Footer() {
           {/* Connect */}
           <div>
             <h4 className="text-xs tracking-widest uppercase text-accent font-semibold mb-4">Connect</h4>
+            <div className="flex gap-4 mb-6">
+              <a 
+                href="https://www.facebook.com/HorizonAdventuresZA/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-primary-foreground/80 hover:text-accent transition-colors"
+                aria-label="Facebook"
+              >
+                <FaFacebook className="w-6 h-6" />
+              </a>
+              <a 
+                href="https://www.instagram.com/horizonadventuresza" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-primary-foreground/80 hover:text-accent transition-colors"
+                aria-label="Instagram"
+              >
+                <FaInstagram className="w-6 h-6" />
+              </a>
+              <a 
+                href="https://www.tiktok.com/@horizonadventuresza" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-primary-foreground/80 hover:text-accent transition-colors"
+                aria-label="TikTok"
+              >
+                <FaTiktok className="w-6 h-6" />
+              </a>
+              <a 
+                href="https://www.linkedin.com/company/horizon-adventures/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-primary-foreground/80 hover:text-accent transition-colors"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedin className="w-6 h-6" />
+              </a>
+            </div>
             <ul className="space-y-3 text-sm text-primary-foreground/80">
-              <li>
-                <a href="https://www.facebook.com/HorizonAdventuresZA/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
-                  Facebook
-                </a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/horizonadventuresza" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
-                  Instagram
-                </a>
-              </li>
               <li>
                 <a href="/contact" className="hover:text-accent transition-colors">
                   Contact Us

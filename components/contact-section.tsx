@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import Link from "next/link"
 import { Phone, Mail, MapPin, Clock, Globe } from "lucide-react"
+import { FaFacebook, FaInstagram, FaTiktok, FaLinkedin } from "react-icons/fa"
 
 export function ContactSection() {
   return (
@@ -93,16 +94,36 @@ export function ContactSection() {
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-accent hover:text-primary transition-colors"
+                    aria-label="Facebook"
                   >
-                    <span className="text-sm font-medium">Facebook</span>
+                    <FaFacebook className="w-6 h-6" />
                   </Link>
                   <Link 
                     href="https://www.instagram.com/horizonadventuresza" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-accent hover:text-primary transition-colors"
+                    aria-label="Instagram"
                   >
-                    <span className="text-sm font-medium">Instagram</span>
+                    <FaInstagram className="w-6 h-6" />
+                  </Link>
+                  <Link 
+                    href="https://www.tiktok.com/@horizonadventuresza" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-accent hover:text-primary transition-colors"
+                    aria-label="TikTok"
+                  >
+                    <FaTiktok className="w-6 h-6" />
+                  </Link>
+                  <Link 
+                    href="https://www.linkedin.com/company/horizon-adventures/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-accent hover:text-primary transition-colors"
+                    aria-label="LinkedIn"
+                  >
+                    <FaLinkedin className="w-6 h-6" />
                   </Link>
                 </div>
               </div>
