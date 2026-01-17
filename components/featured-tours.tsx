@@ -9,7 +9,7 @@ const tours = [
     nights: "3 nights / 4 days",
     price: "R4,500",
     pricePerPerson: true,
-    image: "/cape-town-robben-island-table-mountain-aerial-view.jpg",
+    image: "/images/cape-town-tour-page.webp",
     highlights: "Robben Island · Table Mountain · City exploration · Historical sites",
     description: "Thrilled to present our Cape Town Heritage Tour! Embark on a journey through South Africa's most historic city. Experience the magic of Table Mountain with themed activities, unwind at Camps Bay in the Atlantic Ocean, and witness breathtaking sunsets. This multi-day tour takes you to iconic landmarks including Robben Island—a place steeped in history and resilience. Truly unforgettable!",
     includes: [
@@ -36,7 +36,7 @@ const tours = [
     nights: "3 nights / 4 days",
     price: "R4,851",
     pricePerPerson: true,
-    image: "/blyde-river-canyon-panorama-route-dramatic-landsca.jpg",
+    image: "/images/panorama-route-scenic.webp",
     highlights: "Blyde River Canyon · Waterfalls · Scenic viewpoints · Cultural heritage",
     description: "Nothing short of spectacular! Experience the breathtaking Panorama Route with its dramatic landscapes, stunning waterfalls, and iconic viewpoints. Day 2 wraps up perfectly with pool relaxation and delicious braai dinners under the African sky. We're co-creating memorable experiences that showcase Mpumalanga's natural wonders, including the magnificent Blyde River Canyon. Truly a day to remember!",
     includes: [
@@ -63,7 +63,7 @@ const tours = [
     nights: "2 nights / 3 days",
     price: "R4,990",
     pricePerPerson: true,
-    image: "/hartbeespoort-dam-sunset-serene-water-landscape.jpg",
+    image: "/images/hartbeespoort-dam.webp",
     highlights: "Dam activities · Accommodation · Guided exploration · Adventure experiences",
     description: "Perfect for adventure lovers! This comprehensive tour includes accommodation, guided exploration, and a variety of dam-area activities. Experience the beauty of Hartbeespoort while enjoying thrilling adventures and serene moments by the water.",
     includes: [

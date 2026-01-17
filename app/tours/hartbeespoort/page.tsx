@@ -3,6 +3,18 @@ import { Footer } from "@/components/footer"
 import { PageHero } from "@/components/page-hero"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Hartbeespoort Adventure Tour",
+  description: "Perfect for adventure lovers! Experience dam activities, accommodation, guided exploration, and adventure experiences at Hartbeespoort. From R4,990 per person for 2 nights/3 days.",
+  keywords: ["Hartbeespoort tour", "Hartbeespoort Dam", "adventure tour", "dam activities", "North West Province tours"],
+  openGraph: {
+    title: "Hartbeespoort Adventure Tour | Horizon Adventures",
+    description: "Perfect for adventure lovers! Experience dam activities and adventure experiences at Hartbeespoort.",
+    url: "https://www.horizonadv.co.za/tours/hartbeespoort",
+  },
+}
 
 export default function HartbeespoortTourPage() {
   return (
@@ -11,7 +23,7 @@ export default function HartbeespoortTourPage() {
       <PageHero 
         title="Hartbeespoort Adventure Tour"
         subtitle="Perfect for adventure lovers! Experience dam activities and thrilling adventures"
-        backgroundImage="/hartbeespoort-dam-sunset-serene-water-landscape.jpg"
+        backgroundImage="/images/hartbeespoort-dam.webp"
       />
       
       {/* Tour Overview */}
@@ -133,6 +145,28 @@ export default function HartbeespoortTourPage() {
                   <span key={idx} className="px-4 py-2 bg-accent/10 text-primary rounded-full text-sm font-medium">
                     {highlight}
                   </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Image Gallery */}
+            <div className="mb-12">
+              <h2 className="text-3xl font-bold text-primary mb-6">Tour Gallery</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {[
+                  { src: "/images/hartbeespoort-dam.webp", alt: "Hartbeespoort Dam" },
+                  { src: "/images/hartbeespoort-hiking-activity.webp", alt: "Hiking Activity" },
+                  { src: "/images/hartbeespoort-camp-activity-1.webp", alt: "Camp Activities" },
+                  { src: "/images/quad-biking-activity-1.webp", alt: "Quad Biking" },
+                  { src: "/images/braai-dinner-activity1.webp", alt: "Braai Dinner" },
+                ].map((img, idx) => (
+                  <div key={idx} className="relative aspect-[4/3] overflow-hidden rounded-lg group">
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
                 ))}
               </div>
             </div>

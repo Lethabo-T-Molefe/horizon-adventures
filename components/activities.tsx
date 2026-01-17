@@ -4,44 +4,56 @@ const activities = [
   {
     title: "River Rafting",
     description: "Navigate thrilling rapids with expert guides through South Africa's most dramatic waterways. Experience the rush of white-water adventure while taking in stunning natural scenery. Perfect for thrill-seekers and adventure lovers!",
-    image: "/river-rafting-south-africa-action-adventure-white-.jpg",
+    image: "/images/river-rafting.webp",
     details: "Suitable for groups, includes safety equipment and expert guides. Varying difficulty levels available."
   },
   {
     title: "Kloofing",
     description: "Canyon exploration combining hiking, climbing, and swimming through pristine natural gorges. Jump into crystal-clear pools, navigate through canyons, and experience nature's playground. An adventure that combines physical challenge with breathtaking beauty.",
-    image: "/kloofing-canyon-jumping-south-africa-waterfall-cry.jpg",
+    image: "/images/kloofing-activity.webp",
     details: "Includes hiking, jumping, and swimming. Safety equipment provided. Suitable for moderate fitness levels."
   },
   {
     title: "Hot Air Balloon Rides",
     description: "Soar above South Africa's breathtaking landscapes in a hot air balloon. Experience the magic of floating through the sky while taking in panoramic views of mountains, valleys, and natural wonders. A truly unforgettable and empowering experience!",
-    image: "/dramatic-south-african-mountain-landscape-vista-pa.jpg",
+    image: "/images/couples-tour-hotair-balloon.webp",
     details: "45-60 minute flights available. Includes safety briefing, equipment, and expert pilots. Perfect for special occasions and group experiences."
   },
   {
     title: "Braai Dinners Under African Sky",
     description: "Experience authentic South African culture with traditional braai dinners under the African sky. Enjoy delicious grilled cuisine, warm hospitality, and unforgettable evenings surrounded by nature's beauty. Perfect for group bonding and cultural immersion.",
-    image: "/hartbeespoort-dam-sunset-serene-water-landscape.jpg",
+    image: "/images/braai-dinner-activity1.webp",
     details: "Traditional South African barbecue experience. Includes meals, setup, and cultural entertainment. Perfect for groups and special occasions."
-  },
-  {
-    title: "Ocean Immersion & Pool Relaxation",
-    description: "Unwind and relax with ocean immersion experiences at Camps Bay (Atlantic Ocean) or Durban (Indian Ocean), or enjoy pool relaxation after a day of adventure. Perfect for combining adventure with relaxation and rejuvenation.",
-    image: "/cape-town-robben-island-table-mountain-aerial-view.jpg",
-    details: "Beach access, pool facilities, and guided ocean activities. Perfect for unwinding after adventure activities. Suitable for all fitness levels."
   },
   {
     title: "Quad Biking",
     description: "Explore rugged terrain and scenic trails on powerful quad bikes. Perfect for adventure enthusiasts looking for an adrenaline rush while discovering South Africa's diverse landscapes.",
-    image: "/dramatic-south-african-mountain-landscape-vista-pa.jpg",
+    image: "/images/quad-biking-activity-1.webp",
     details: "Guided tours available. Safety briefing and equipment included. Suitable for beginners and experienced riders."
+  },
+  {
+    title: "Ziplining",
+    description: "Soar through the air on thrilling zipline adventures across South Africa's stunning landscapes. Experience the rush of flying while taking in breathtaking views from above.",
+    image: "/images/ziplining.webp",
+    details: "Multiple zipline courses available. Safety equipment and expert guides included. Suitable for all adventure levels."
+  },
+  {
+    title: "Horse Riding",
+    description: "Explore South Africa's beautiful countryside on horseback. Perfect for nature lovers seeking a peaceful yet adventurous way to experience the landscape.",
+    image: "/images/horse-riding-1.webp",
+    details: "Guided horse riding tours available. Suitable for beginners and experienced riders. Includes safety equipment."
   },
   {
     title: "Guided Hiking",
     description: "Expert-led hiking expeditions through South Africa's most scenic trails and natural reserves. Discover hidden waterfalls, panoramic viewpoints, and diverse ecosystems with knowledgeable guides.",
-    image: "/dramatic-south-african-mountain-landscape-panorama.jpg",
+    image: "/images/hartbeespoort-hiking-activity.webp",
     details: "Various difficulty levels. Includes guide, trail fees, and safety equipment. Perfect for nature lovers."
+  },
+  {
+    title: "Wildlife Encounters",
+    description: "Experience South Africa's incredible wildlife up close. From zebras to ostriches, discover the diverse fauna that calls this beautiful country home.",
+    image: "/images/wildlife-zebra.webp",
+    details: "Guided wildlife viewing experiences. Learn about local fauna and their habitats. Perfect for nature enthusiasts."
   },
 ]
 

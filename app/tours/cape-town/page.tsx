@@ -3,6 +3,18 @@ import { Footer } from "@/components/footer"
 import { PageHero } from "@/components/page-hero"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Cape Town Heritage Tour",
+  description: "Experience Cape Town's rich history with our 3+ day heritage tour. Visit Robben Island, explore Table Mountain, unwind at Camps Bay, and witness Atlantic Ocean sunsets. From R4,500 per person.",
+  keywords: ["Cape Town tour", "Robben Island tour", "Table Mountain tour", "Cape Town heritage", "Western Cape tours"],
+  openGraph: {
+    title: "Cape Town Heritage Tour | Horizon Adventures",
+    description: "Experience Cape Town's rich history with our 3+ day heritage tour. Visit Robben Island, explore Table Mountain, and more.",
+    url: "https://www.horizonadv.co.za/tours/cape-town",
+  },
+}
 
 export default function CapeTownTourPage() {
   return (
@@ -11,7 +23,7 @@ export default function CapeTownTourPage() {
       <PageHero 
         title="Cape Town Heritage Tour"
         subtitle="Embark on a journey through South Africa's most historic city"
-        backgroundImage="/cape-town-robben-island-table-mountain-aerial-view.jpg"
+        backgroundImage="/images/cape-town-tour-page.webp"
       />
       
       {/* Tour Overview */}
@@ -125,6 +137,29 @@ export default function CapeTownTourPage() {
                   <span key={idx} className="px-4 py-2 bg-accent/10 text-primary rounded-full text-sm font-medium">
                     {highlight}
                   </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Image Gallery */}
+            <div className="mb-12">
+              <h2 className="text-3xl font-bold text-primary mb-6">Tour Gallery</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {[
+                  { src: "/images/cape-town-table-mountain.webp", alt: "Table Mountain" },
+                  { src: "/images/cape-town-robben-island.webp", alt: "Robben Island" },
+                  { src: "/images/cape-town-ocean-view.webp", alt: "Cape Town Ocean View" },
+                  { src: "/images/cape-town-boat-ride.webp", alt: "Boat Ride" },
+                  { src: "/images/cape-town-hike.webp", alt: "Cape Town Hiking" },
+                  { src: "/images/cape-town-vineyard.webp", alt: "Cape Town Vineyard" },
+                ].map((img, idx) => (
+                  <div key={idx} className="relative aspect-[4/3] overflow-hidden rounded-lg group">
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
                 ))}
               </div>
             </div>

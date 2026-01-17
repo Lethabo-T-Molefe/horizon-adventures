@@ -4,44 +4,44 @@ import FlowingMenu from "@/components/flowing-menu"
 
 const destinations = [
   {
-    link: "/tours#hartbeespoort",
+    link: "/tours/hartbeespoort",
     text: "Hartbeespoort",
-    image: "/hartbeespoort-dam-sunset-serene-water-landscape.jpg"
+    image: "/images/hartbeespoort-dam.webp"
   },
   {
-    link: "/tours#cape-town",
+    link: "/tours/cape-town",
     text: "Cape Town",
-    image: "/cape-town-robben-island-table-mountain-aerial-view.jpg"
+    image: "/images/cape-town-table-mountain.webp"
   },
   {
-    link: "/tours#panorama-route",
+    link: "/tours/mpumalanga",
     text: "Panorama Route",
-    image: "/blyde-river-canyon-panorama-route-dramatic-landsca.jpg"
+    image: "/images/panorama-route-scenic.webp"
   },
   {
-    link: "/tours#kruger",
-    text: "Kruger National Park",
-    image: "/dramatic-south-african-mountain-landscape-vista-pa.jpg"
+    link: "/tours",
+    text: "Wildlife Encounters",
+    image: "/images/wildlife-zebra.webp"
   },
   {
-    link: "/tours#durban",
+    link: "/tours/durban",
     text: "Durban",
-    image: "/river-rafting-south-africa-action-adventure-white-.jpg"
+    image: "/images/durban-ushaka-marine-world.webp"
   },
   {
-    link: "/tours#lone-creek-falls",
-    text: "Lone Creek Falls",
-    image: "/kloofing-canyon-jumping-south-africa-waterfall-cry.jpg"
+    link: "/tours",
+    text: "Adventure Activities",
+    image: "/images/kloofing-activity.webp"
   },
   {
-    link: "/tours#sun-city",
+    link: "/tours",
     text: "Sun City Resort",
-    image: "/hartbeespoort-dam-adventure-activities-sunset.jpg"
+    image: "/images/sun-city-group-adventure-activity.webp"
   },
   {
-    link: "/tours#magaliesburg",
-    text: "Magaliesburg",
-    image: "/dramatic-south-african-mountain-landscape-panorama.jpg"
+    link: "/tours",
+    text: "Mountain Views",
+    image: "/images/mpumalanga-mountain-view.webp"
   }
 ]
 

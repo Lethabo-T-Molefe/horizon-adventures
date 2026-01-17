@@ -3,6 +3,8 @@
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import Link from "next/link"
+import { Phone, Mail, MapPin, Clock, Globe } from "lucide-react"
 
 export function ContactSection() {
   return (
@@ -14,41 +16,96 @@ export function ContactSection() {
             Start Your Adventure Today
           </h2>
           <p className="text-lg text-muted-foreground mt-6 max-w-2xl mx-auto">
-            Ready to explore? Contact us to plan your perfect South African adventure.
+            Ready to explore? We're thrilled to help you plan your perfect South African adventure. 
+            Get in touch with us today to start co-creating unforgettable experiences!
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
           <div className="space-y-6">
-            <div className="p-8 bg-white border-l-4 border-accent">
-              <h3 className="text-sm tracking-widest uppercase text-primary font-bold mb-3">Location</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Pretoria, South Africa
-                <br />
-                Operating across multiple regions
-              </p>
+            <div className="p-8 bg-white border-l-4 border-accent shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-start gap-4">
+                <MapPin className="w-6 h-6 text-accent mt-1 flex-shrink-0" />
+                <div>
+                  <h3 className="text-sm tracking-widest uppercase text-primary font-bold mb-3">Location</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Pretoria, Gauteng, South Africa
+                    <br />
+                    Operating across multiple regions throughout South Africa
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div className="p-8 bg-white border-l-4 border-accent">
-              <h3 className="text-sm tracking-widest uppercase text-primary font-bold mb-3">Contact</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                <strong>Lebogang:</strong> 081 742 9417
-                <br />
-                <strong>Phone:</strong> +27 60 438 1561
-                <br />
-                <strong>Email:</strong> Horizonadventuresza@gmail.com
-                <br />
-                <strong>Website:</strong> www.horizonadv.co.za
-              </p>
+            <div className="p-8 bg-white border-l-4 border-accent shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-start gap-4">
+                <Phone className="w-6 h-6 text-accent mt-1 flex-shrink-0" />
+                <div>
+                  <h3 className="text-sm tracking-widest uppercase text-primary font-bold mb-3">Contact</h3>
+                  <div className="text-muted-foreground leading-relaxed space-y-2">
+                    <div>
+                      <strong className="text-primary">Lebogang:</strong>{" "}
+                      <a href="tel:0817429417" className="text-accent hover:underline">081 742 9417</a>
+                    </div>
+                    <div>
+                      <strong className="text-primary">Phone:</strong>{" "}
+                      <a href="tel:+27604381561" className="text-accent hover:underline">+27 60 438 1561</a>
+                    </div>
+                    <div>
+                      <strong className="text-primary">Email:</strong>{" "}
+                      <a href="mailto:Horizonadventuresza@gmail.com" className="text-accent hover:underline break-all">
+                        Horizonadventuresza@gmail.com
+                      </a>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Globe className="w-4 h-4 text-muted-foreground" />
+                      <a href="https://www.horizonadv.co.za" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+                        www.horizonadv.co.za
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div className="p-8 bg-white border-l-4 border-accent">
-              <h3 className="text-sm tracking-widest uppercase text-primary font-bold mb-3">Hours</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Monday – Saturday
-                <br />
-                8:00 AM – 6:00 PM
-              </p>
+            <div className="p-8 bg-white border-l-4 border-accent shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-start gap-4">
+                <Clock className="w-6 h-6 text-accent mt-1 flex-shrink-0" />
+                <div>
+                  <h3 className="text-sm tracking-widest uppercase text-primary font-bold mb-3">Business Hours</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Monday – Saturday
+                    <br />
+                    8:00 AM – 6:00 PM
+                    <br />
+                    <span className="text-sm text-muted-foreground/80">Sunday: By appointment</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-8 bg-white border-l-4 border-accent shadow-sm hover:shadow-md transition-shadow">
+              <div>
+                <h3 className="text-sm tracking-widest uppercase text-primary font-bold mb-3">Follow Us</h3>
+                <div className="flex gap-4 mt-4">
+                  <Link 
+                    href="https://www.facebook.com/HorizonAdventuresZA/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-accent hover:text-primary transition-colors"
+                  >
+                    <span className="text-sm font-medium">Facebook</span>
+                  </Link>
+                  <Link 
+                    href="https://www.instagram.com/horizonadventuresza" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-accent hover:text-primary transition-colors"
+                  >
+                    <span className="text-sm font-medium">Instagram</span>
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
 

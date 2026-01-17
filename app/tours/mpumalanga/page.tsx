@@ -3,6 +3,18 @@ import { Footer } from "@/components/footer"
 import { PageHero } from "@/components/page-hero"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Mpumalanga Panorama Route Tour",
+  description: "Nothing short of spectacular! Experience the breathtaking Panorama Route with Blyde River Canyon, waterfalls, scenic viewpoints, pool relaxation, and braai dinners. From R4,851 per person.",
+  keywords: ["Mpumalanga tour", "Panorama Route", "Blyde River Canyon", "Mpumalanga adventure", "scenic tours South Africa"],
+  openGraph: {
+    title: "Mpumalanga Panorama Route Tour | Horizon Adventures",
+    description: "Experience the breathtaking Panorama Route with Blyde River Canyon, waterfalls, and scenic viewpoints.",
+    url: "https://www.horizonadv.co.za/tours/mpumalanga",
+  },
+}
 
 export default function MpumalangaTourPage() {
   return (
@@ -11,7 +23,7 @@ export default function MpumalangaTourPage() {
       <PageHero 
         title="Mpumalanga Panorama Route Tour"
         subtitle="Nothing short of spectacular! Experience breathtaking landscapes and natural wonders"
-        backgroundImage="/blyde-river-canyon-panorama-route-dramatic-landsca.jpg"
+        backgroundImage="/images/panorama-route-scenic.webp"
       />
       
       {/* Tour Overview */}
@@ -139,6 +151,27 @@ export default function MpumalangaTourPage() {
                   <span key={idx} className="px-4 py-2 bg-accent/10 text-primary rounded-full text-sm font-medium">
                     {highlight}
                   </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Image Gallery */}
+            <div className="mb-12">
+              <h2 className="text-3xl font-bold text-primary mb-6">Tour Gallery</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {[
+                  { src: "/images/panorama-route-scenic.webp", alt: "Panorama Route Scenic View" },
+                  { src: "/images/panorama-mountain.webp", alt: "Panorama Mountain" },
+                  { src: "/images/mpumalanga-mountain-view.webp", alt: "Mpumalanga Mountain View" },
+                  { src: "/images/braai-dinner-activity1.webp", alt: "Braai Dinner Experience" },
+                ].map((img, idx) => (
+                  <div key={idx} className="relative aspect-[4/3] overflow-hidden rounded-lg group">
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
                 ))}
               </div>
             </div>

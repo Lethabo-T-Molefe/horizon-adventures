@@ -4,6 +4,11 @@ import Navbar from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import Image from "next/image"
 import { useEffect, useRef } from "react"
+import type { Metadata } from "next"
+
+// Note: Metadata export doesn't work with "use client" components
+// This would need to be moved to a separate layout or the component restructured
+// For now, we'll add it via the parent layout
 
 export default function AboutPage() {
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -28,7 +33,7 @@ export default function AboutPage() {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 z-0">
           <img
-            src="/dramatic-south-african-mountain-landscape-vista-pa.jpg"
+            src="/images/panorama-route-scenic.webp"
             alt="South African Landscape"
             className="w-full h-full object-cover"
           />

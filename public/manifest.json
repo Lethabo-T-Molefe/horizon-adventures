@@ -1,0 +1,23 @@
+{
+  "name": "Horizon Adventures - Adventure Tourism in South Africa",
+  "short_name": "Horizon Adventures",
+  "description": "Specialists in Team Building Tours, Youth Camps, School Camps, Church Camps, Leadership Camps, Events, and Hiking across South Africa",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0a0a0f",
+  "icons": [
+    {
+      "src": "/images/image.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/image.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -4,7 +4,7 @@ interface PageHeroProps {
   backgroundImage?: string
 }
 
-export function PageHero({ title, subtitle, backgroundImage = "/dramatic-south-african-mountain-landscape-vista-pa.jpg" }: PageHeroProps) {
+export function PageHero({ title, subtitle, backgroundImage = "/images/panorama-route-scenic.webp" }: PageHeroProps) {
   return (
     <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden pt-20">
       <div className="absolute inset-0 z-0">

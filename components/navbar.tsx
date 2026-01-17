@@ -24,6 +24,7 @@ const Navbar = () => {
     { label: "Destinations", href: "/destinations" },
     { label: "Testimonials", href: "/testimonials" },
     { label: "About", href: "/about" },
+    { label: "Contact", href: "/contact" },
   ];
 
   return (
@@ -78,7 +79,7 @@ const Navbar = () => {
           {/* CTA - Brand colored */}
           <div className="hidden lg:block">
             <Link
-              href="#contact"
+              href="/contact"
               className={`text-caption font-medium uppercase tracking-[0.1em] px-6 py-3 rounded-md transition-all duration-300 ${
                 isScrolled
                   ? "bg-primary text-primary-foreground hover:bg-primary/90"
@@ -156,7 +157,7 @@ const Navbar = () => {
                 className="pt-8 border-t border-border"
               >
                 <Link
-                  href="#contact"
+                  href="/contact"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="inline-block text-caption font-medium uppercase tracking-[0.1em] px-8 py-4 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
                 >

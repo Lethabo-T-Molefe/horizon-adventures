@@ -4,11 +4,14 @@ import BounceCards from "@/components/bounce-cards"
 import { PageHero } from "@/components/page-hero"
 
 const featuredImages = [
-  "/cape-town-robben-island-table-mountain-aerial-view.jpg",
-  "/blyde-river-canyon-panorama-route-dramatic-landsca.jpg",
-  "/hartbeespoort-dam-sunset-serene-water-landscape.jpg",
-  "/river-rafting-south-africa-action-adventure-white-.jpg",
-  "/kloofing-canyon-jumping-south-africa-waterfall-cry.jpg"
+  "/images/cape-town-table-mountain.webp",
+  "/images/panorama-route-scenic.webp",
+  "/images/hartbeespoort-dam.webp",
+  "/images/river-rafting.webp",
+  "/images/kloofing-activity.webp",
+  "/images/cape-town-ocean-view.webp",
+  "/images/mpumalanga-mountain-view.webp",
+  "/images/cape-town-vineyard.webp"
 ]
 
 export default function FeaturedDestinationsPage() {
@@ -18,7 +21,7 @@ export default function FeaturedDestinationsPage() {
       <PageHero 
         title="Featured Destinations"
         subtitle="Discover the breathtaking destinations we visit on our unforgettable tours"
-        backgroundImage="/cape-town-robben-island-table-mountain-aerial-view.jpg"
+        backgroundImage="/images/cape-town-table-mountain.webp"
       />
       <section className="py-20 md:py-32 bg-muted/30">
         <div className="container mx-auto px-6 lg:px-12">

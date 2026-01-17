@@ -5,37 +5,37 @@ const tripTypes = [
     name: "Team Building",
     description:
       "Customized programs for corporate groups through outdoor challenges and collaborative experiences in natural settings.",
-    src: "/dramatic-south-african-mountain-landscape-vista-pa.jpg",
+    src: "/images/team-building-activity-1.webp",
   },
   {
     name: "Youth Leadership",
     description:
       "Adventure camps focusing on personal development and leadership skills through immersive nature exploration.",
-    src: "/kloofing-canyon-jumping-south-africa-waterfall-cry.jpg",
+    src: "/images/camp-arrival.webp",
   },
   {
     name: "Educational Retreats",
     description:
       "Spiritual and educational programs blending team activities with outdoor adventures for schools and institutions.",
-    src: "/blyde-river-canyon-panorama-route-dramatic-landsca.jpg",
+    src: "/images/camp-activity-1.webp",
   },
   {
     name: "Cultural Tours",
     description:
       "Multi-day guided journeys to iconic destinations including Cape Town, Mpumalanga, and Hartbeespoort.",
-    src: "/cape-town-robben-island-table-mountain-aerial-view.jpg",
+    src: "/images/cape-town-tour-page.webp",
   },
   {
     name: "Private Events",
     description:
       "Curated experiences for couples and small groups seeking meaningful connections through adventure.",
-    src: "/hartbeespoort-dam-sunset-serene-water-landscape.jpg",
+    src: "/images/couples-tour-hotair-balloon.webp",
   },
   {
     name: "Guided Expeditions",
     description:
       "Expert-led hiking and exploration programs through South Africa's most scenic trails and natural reserves.",
-    src: "/river-rafting-south-africa-action-adventure-white-.jpg",
+    src: "/images/hartbeespoort-hiking-activity.webp",
   },
 ];
 

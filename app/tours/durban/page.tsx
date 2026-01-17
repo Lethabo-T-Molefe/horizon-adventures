@@ -3,6 +3,18 @@ import { Footer } from "@/components/footer"
 import { PageHero } from "@/components/page-hero"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Durban Coastal Adventure",
+  description: "Experience the warmth of the Indian Ocean and vibrant coastal culture in Durban. Discover golden beaches, Zulu heritage, and coastal activities. Custom tour packages available.",
+  keywords: ["Durban tour", "Indian Ocean", "coastal tour", "KwaZulu-Natal tours", "Durban adventure"],
+  openGraph: {
+    title: "Durban Coastal Adventure | Horizon Adventures",
+    description: "Experience the warmth of the Indian Ocean and vibrant coastal culture in Durban.",
+    url: "https://www.horizonadv.co.za/tours/durban",
+  },
+}
 
 export default function DurbanTourPage() {
   return (
@@ -11,7 +23,7 @@ export default function DurbanTourPage() {
       <PageHero 
         title="Durban Coastal Adventure"
         subtitle="Experience the warmth of the Indian Ocean and vibrant coastal culture"
-        backgroundImage="/river-rafting-south-africa-action-adventure-white-.jpg"
+        backgroundImage="/images/durban-ushaka-marine-world.webp"
       />
       
       {/* Tour Overview */}
@@ -112,6 +124,25 @@ export default function DurbanTourPage() {
                   <span key={idx} className="px-4 py-2 bg-accent/10 text-primary rounded-full text-sm font-medium">
                     {highlight}
                   </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Image Gallery */}
+            <div className="mb-12">
+              <h2 className="text-3xl font-bold text-primary mb-6">Tour Gallery</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {[
+                  { src: "/images/durban-ushaka-marine-world.webp", alt: "uShaka Marine World" },
+                  { src: "/images/river-rafting.webp", alt: "Water Activities" },
+                ].map((img, idx) => (
+                  <div key={idx} className="relative aspect-[4/3] overflow-hidden rounded-lg group">
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
                 ))}
               </div>
             </div>
