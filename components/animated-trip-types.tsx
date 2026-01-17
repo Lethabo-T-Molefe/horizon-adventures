@@ -78,7 +78,7 @@ export const AnimatedTripTypes = ({
                       z: isActive(index) ? 0 : -100,
                       rotate: isActive(index) ? 0 : rotation,
                       zIndex: isActive(index)
-                        ? 999
+                        ? 10
                         : tripTypes.length + 2 - index,
                       y: isActive(index) ? [0, -80, 0] : 0,
                     }}

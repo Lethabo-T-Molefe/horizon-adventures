@@ -41,7 +41,7 @@ const tripTypes = [
 
 export function TripTypesShowcase() {
   return (
-    <section id="trip-types" className="py-12 sm:py-16 md:py-20 lg:py-32 bg-muted/30">
+    <section id="trip-types" className="relative py-12 sm:py-16 md:py-20 lg:py-32 bg-muted/30 z-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-12">
         <div className="mb-8 sm:mb-12 md:mb-16 text-center">
           <p className="text-xs sm:text-sm tracking-widest uppercase text-accent font-bold mb-3 sm:mb-4">

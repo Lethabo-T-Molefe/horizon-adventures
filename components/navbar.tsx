@@ -107,9 +107,9 @@ const Navbar = () => {
             <Image 
               src="/images/image.png" 
               alt="Horizon Adventures" 
-              width={48}
-              height={48}
-              className="h-12 w-auto"
+              width={64}
+              height={64}
+              className="h-16 w-auto"
             />
             <span className={`text-lg font-semibold tracking-tight transition-colors duration-300 hidden sm:block ${
               isScrolled ? "text-foreground" : "text-white"
@@ -234,9 +234,9 @@ const Navbar = () => {
               <Image 
                 src="/images/image.png" 
                 alt="Horizon Adventures" 
-                width={48}
-                height={48}
-                className="h-12 w-auto" 
+                width={64}
+                height={64}
+                className="h-16 w-auto" 
               />
               <h2 className="text-2xl font-bold text-gray-900">
                 Horizon Adventures

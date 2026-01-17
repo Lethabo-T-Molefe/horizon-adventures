@@ -9,7 +9,7 @@ export function Footer() {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <Image src="/images/image.png" alt="Horizon Adventures" width={50} height={50} className="w-12 h-12" />
+              <Image src="/images/image.png" alt="Horizon Adventures" width={64} height={64} className="w-16 h-16" />
               <h3 className="text-xl tracking-tight font-semibold">Horizon Adventures</h3>
             </div>
             <p className="text-primary-foreground/80 leading-relaxed max-w-md mb-4">
