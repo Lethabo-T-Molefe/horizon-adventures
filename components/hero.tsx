@@ -14,17 +14,14 @@ export function Hero() {
 
       <div className="container mx-auto px-6 lg:px-12 z-10">
         <div className="max-w-5xl">
-          <p className="text-sm tracking-widest uppercase text-accent font-bold mb-6 animate-fade-in">
-            Pretoria, South Africa
-          </p>
-
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 tracking-tight leading-[0.95] text-balance drop-shadow-lg">
             Adventure Awaits in the Heart of Africa
           </h1>
 
           <p className="text-lg md:text-xl text-white/95 max-w-2xl leading-relaxed font-medium mb-12 drop-shadow">
-            Discover breathtaking landscapes, build lasting connections, and create unforgettable memories through our
-            expertly guided tours and team experiences.
+            We're thrilled to co-create memorable experiences! Discover breathtaking landscapes, build lasting 
+            connections, and create unforgettable memories through our expertly guided tours and team experiences. 
+            Nothing short of spectacular!
           </p>
 
           <div className="flex flex-wrap gap-4">

@@ -1,6 +1,6 @@
 "use client";
 
-import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState, useCallback, useMemo } from "react";
@@ -162,13 +162,13 @@ export const AnimatedTripTypes = ({
               onClick={handlePrev}
               className="h-7 w-7 rounded-full bg-secondary flex items-center justify-center group/button"
             >
-              <IconArrowLeft className="h-5 w-5 text-foreground group-hover/button:rotate-12 transition-transform duration-300" />
+              <ChevronLeft className="h-5 w-5 text-foreground group-hover/button:rotate-12 transition-transform duration-300" />
             </button>
             <button
               onClick={handleNext}
               className="h-7 w-7 rounded-full bg-secondary flex items-center justify-center group/button"
             >
-              <IconArrowRight className="h-5 w-5 text-foreground group-hover/button:-rotate-12 transition-transform duration-300" />
+              <ChevronRight className="h-5 w-5 text-foreground group-hover/button:-rotate-12 transition-transform duration-300" />
             </button>
           </div>
         </div>

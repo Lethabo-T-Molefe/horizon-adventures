@@ -11,9 +11,12 @@ export function Footer() {
               <Image src="/images/image.png" alt="Horizon Adventures" width={50} height={50} className="w-12 h-12" />
               <h3 className="text-xl tracking-tight font-semibold">Horizon Adventures</h3>
             </div>
-            <p className="text-primary-foreground/80 leading-relaxed max-w-md">
+            <p className="text-primary-foreground/80 leading-relaxed max-w-md mb-4">
               Creating meaningful outdoor experiences across South Africa through team building, cultural tours, and
               wilderness exploration.
+            </p>
+            <p className="text-sm text-primary-foreground/70">
+              Specialists in: Team Building, Tour Packages, Youth Camps, Leadership Camps, Events, Hiking
             </p>
           </div>
 
@@ -49,21 +52,25 @@ export function Footer() {
             <h4 className="text-xs tracking-widest uppercase text-accent font-semibold mb-4">Connect</h4>
             <ul className="space-y-3 text-sm text-primary-foreground/80">
               <li>
-                <a href="#" className="hover:text-accent transition-colors">
+                <a href="https://www.facebook.com/HorizonAdventuresZA/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
                   Facebook
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-accent transition-colors">
+                <a href="https://www.instagram.com/horizonadventuresza" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
                   Instagram
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-accent transition-colors">
-                  LinkedIn
+                <a href="/contact" className="hover:text-accent transition-colors">
+                  Contact Us
                 </a>
               </li>
             </ul>
+            <div className="mt-6">
+              <p className="text-xs text-primary-foreground/70 mb-2">Based in Pretoria, South Africa</p>
+              <p className="text-xs text-primary-foreground/70">Specialists in Adventure Tourism</p>
+            </div>
           </div>
         </div>
 

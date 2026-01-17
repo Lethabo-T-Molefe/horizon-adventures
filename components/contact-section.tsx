@@ -32,9 +32,13 @@ export function ContactSection() {
             <div className="p-8 bg-white border-l-4 border-accent">
               <h3 className="text-sm tracking-widest uppercase text-primary font-bold mb-3">Contact</h3>
               <p className="text-muted-foreground leading-relaxed">
-                +27 (0) 12 345 6789
+                <strong>Lebogang:</strong> 081 742 9417
                 <br />
-                info@horizonadventures.co.za
+                <strong>Phone:</strong> +27 60 438 1561
+                <br />
+                <strong>Email:</strong> Horizonadventuresza@gmail.com
+                <br />
+                <strong>Website:</strong> www.horizonadv.co.za
               </p>
             </div>
 

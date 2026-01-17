@@ -1,4 +1,4 @@
-import { Header } from "@/components/header"
+import Navbar from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import FlowingMenu from "@/components/flowing-menu"
 
@@ -48,7 +48,7 @@ const destinations = [
 export default function DestinationsPage() {
   return (
     <main className="min-h-screen">
-      <Header />
+      <Navbar />
       <div className="h-[calc(100vh-5rem)] mt-20">
         <FlowingMenu
           items={destinations}

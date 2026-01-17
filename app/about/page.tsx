@@ -1,6 +1,6 @@
 "use client"
 
-import { Header } from "@/components/header"
+import Navbar from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import Image from "next/image"
 import { useEffect, useRef } from "react"
@@ -22,7 +22,7 @@ export default function AboutPage() {
   }, [])
   return (
     <main className="min-h-screen">
-      <Header />
+      <Navbar />
       
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden pt-20">
@@ -60,24 +60,37 @@ export default function AboutPage() {
                 <p className="text-muted-foreground leading-relaxed mb-6">
                   Horizon Adventures is a premier adventure tourism company based in Pretoria, South Africa. 
                   We specialize in creating transformative experiences that combine the natural beauty of South 
-                  Africa with meaningful connections and personal growth.
+                  Africa with meaningful connections and personal growth. With over 5,100 followers and a growing 
+                  community of adventure enthusiasts, we've established ourselves as specialists in team building, 
+                  tour packages, youth camps, leadership camps, events, and hiking.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  From corporate team building programs to youth leadership camps, educational retreats, and 
-                  guided expeditions, we offer a diverse range of experiences designed to inspire, challenge, 
-                  and connect participants with nature and each other.
+                  From corporate team building programs to youth leadership camps, educational retreats, church 
+                  camps, school camps, and guided expeditions, we offer a diverse range of experiences designed 
+                  to inspire, challenge, and connect participants with nature and each other. Our services extend 
+                  across various regions in South Africa, showcasing the country's diverse landscapes and cultural 
+                  heritage.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  Our expert guides and carefully curated programs ensure that every adventure is not just a 
+                  trip, but a journey of discovery and transformation. We believe in accessible adventures that 
+                  cater to diverse groups, with an emphasis on safety, value, and authentic experiences. Whether 
+                  you're seeking a thrilling river rafting experience, a cultural tour to Cape Town, or a 
+                  team-building retreat, we create memorable outdoor experiences that foster teamwork, personal 
+                  growth, and exploration.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Our expert guides and carefully curated programs ensure that every adventure is not just a 
-                  trip, but a journey of discovery and transformation.
+                  Our ethos centers on community-driven adventures, emphasizing shared experiences, growth, and 
+                  South Africa's natural heritage. We position ourselves as an "adventure for all" provider, 
+                  offering inclusive packages that make thrilling experiences accessible to everyone.
                 </p>
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-16">
               <div className="text-center">
-                <div className="text-4xl font-bold text-accent mb-2">10+</div>
-                <div className="text-sm text-muted-foreground uppercase tracking-wide">Years Experience</div>
+                <div className="text-4xl font-bold text-accent mb-2">5.1K+</div>
+                <div className="text-sm text-muted-foreground uppercase tracking-wide">Community Members</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-accent mb-2">500+</div>
@@ -86,6 +99,10 @@ export default function AboutPage() {
               <div className="text-center">
                 <div className="text-4xl font-bold text-accent mb-2">50+</div>
                 <div className="text-sm text-muted-foreground uppercase tracking-wide">Destinations</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-accent mb-2">7+</div>
+                <div className="text-sm text-muted-foreground uppercase tracking-wide">Service Types</div>
               </div>
             </div>
           </div>

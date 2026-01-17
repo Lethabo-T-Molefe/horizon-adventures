@@ -1,4 +1,4 @@
-import { Header } from "@/components/header"
+import Navbar from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import InteractiveBentoGallery from "@/components/interactive-bento-gallery"
 
@@ -73,7 +73,7 @@ const mediaItems = [
 export default function GalleryPage() {
   return (
     <main className="min-h-screen bg-background">
-      <Header />
+      <Navbar />
       <div className="pt-24 pb-16 md:pt-28 md:pb-20">
         <InteractiveBentoGallery
           mediaItems={mediaItems}
