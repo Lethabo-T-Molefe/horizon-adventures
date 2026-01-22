@@ -134,6 +134,15 @@
 }
 
 @layer base {
+  /* Progressive Enhancement: Hide JS-dependent elements when JS is disabled */
+  .no-js .js-only {
+    display: none !important;
+  }
+  
+  .js .no-js-only {
+    display: none !important;
+  }
+
   * {
     @apply border-border outline-ring/50;
   }

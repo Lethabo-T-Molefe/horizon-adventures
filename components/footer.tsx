@@ -107,7 +107,7 @@ export function Footer() {
         <div className="border-t border-primary-foreground/20 pt-6 sm:pt-8 flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4 text-xs text-primary-foreground/70 text-center sm:text-left">
           <p>© 2026 Horizon Adventures. All rights reserved.</p>
           <div className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-6 md:gap-8">
-            <a href="#" className="hover:text-accent transition-colors">
+            <a href="/privacy-policy" className="hover:text-accent transition-colors">
               Privacy Policy
             </a>
             <a href="#" className="hover:text-accent transition-colors">
